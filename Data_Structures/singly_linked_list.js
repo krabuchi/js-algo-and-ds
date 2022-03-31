@@ -79,9 +79,54 @@ class SinglyLinkedList {
 
     set(idx, val) {
         var cur = this.get(idx);
-        if(!cur) return false;
+        if (!cur) return false;
         cur.value = val;
         return true;
+    }
+
+    insert(idx, val) {
+        if (idx < 0 || idx > this.length) {
+            return false;
+        } else if (idx === this.length) {
+            this.push(val);
+            return true;
+        } else if (idx === 0) {
+            this.unshift(val);
+            return true;
+        } else {
+            var newNode = new Node(val);
+            var prevNod = this.get(idx - 1);
+            var curNode = prevNod.next;
+            newNode.next = curNode;
+            prevNod.next = newNode;
+        }
+        this.length++;
+        return true;
+    }
+
+    remove(idx) {
+        if (idx < 0 || idx > this.length) return undefined;
+        if (idx === this.length - 1) return this.pop();
+        if (idx === 0) return this.shift();
+        var prev = this.get(idx - 1);
+        var cur = prev.next;
+        prev.next = cur.next;
+        this.length--;
+        return cur;
+    }
+
+    reverse() {
+        var node = this.head;
+        this.head = this.tail;//swap head and tail
+        this.tail = node;
+        var next, prev = null;
+        for(var i = 0; i < this.length; i++) {
+            next = node.next;
+            node.next = prev;
+            prev = node;
+            node = next; 
+        }
+        return this;
     }
 }
 

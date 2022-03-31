@@ -1,1 +1,2 @@
-"# js-algo-and-ds" 
+Data Structure and Algorithms in Javascript
+
