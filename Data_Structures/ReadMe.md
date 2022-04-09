@@ -6,11 +6,20 @@
     * Not recommended for search and insertions;
 
 ## Doubly Linked List
-    * Every List has a head, a tail a next and a previous property *
+    * Every List has a head, a tail a next and a previous property 
     * Takes more memory than Singly Linked List
 
 ## Stack
 ## Queue
 ## Binary Tree
+
+## Binary Heaps
+    - Heap is tree structure similar to binary tree.
+    - all children are smaller than maxBinaryHeap.
+    - all children are larger than minBinaryHeap.
+    - binary heap is as compact as possible(least amount of space).
+    - left children always fill out first.
+    - no implied ordering between siblings.
+    - used to implement Priority Queues.
 
 _Copy paste code in the browser console and run_
