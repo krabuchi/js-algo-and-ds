@@ -14,15 +14,21 @@
 ## Binary Tree
 
 ## Binary Heaps
-    - Heap is tree structure similar to binary tree.
-    - all children are smaller than maxBinaryHeap.
-    - all children are larger than minBinaryHeap.
-    - binary heap is as compact as possible(least amount of space).
-    - left children always fill out first.
-    - no implied ordering between siblings.
-    - used to implement Priority Queues.
-    - relation parent to left child -> 2n + 1
-    - relation parent to right child -> 2n + 2
-    - relation child to parent (n - 1) / 2
+    * Heap is tree structure similar to binary tree.
+    * all children are smaller than maxBinaryHeap.
+    * all children are larger than minBinaryHeap.
+    * binary heap is as compact as possible(least amount of space).
+    * left children always fill out first.
+    * no implied ordering between siblings.
+    * used to implement Priority Queues.
+    * relation parent to left child -> 2n + 1
+    * relation parent to right child -> 2n + 2
+    * relation child to parent (n - 1) / 2
+
+## Hash Table(Hash Map)
+    * Hash tables are used to store key-value pairs.
+    * Keys in Hash tables are not ordered.
+    * Fast for finding, adding and removing values.
+    * In Javascript Hash tables eg. Objects and Maps.
 
 _Copy paste code in the browser console and run_
