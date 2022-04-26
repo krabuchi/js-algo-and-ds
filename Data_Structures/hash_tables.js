@@ -34,6 +34,30 @@ class HashTable {
         }
         return undefined;
     }
+
+    values () {
+        let valuesArr = [];
+        for(var i = 0; i < this.keyMap.length; i++) {
+            if(this.keyMap[i]) {
+                for(var j = 0; j < this.keyMap[i].length; j++) {
+                    if(!valuesArr.includes(this.keyMap[i][j][1])) valuesArr.push(this.keyMap[i][j][1]);
+                }
+            }
+        }
+        return valuesArr;
+    }
+
+    keys () {
+        let keysArr = [];
+        for(var i = 0; i < this.keyMap.length; i++) {
+            if(this.keyMap[i]) {
+                for(var j = 0; j < this.keyMap[i].length; j++) {
+                    if(!keysArr.includes(this.keyMap[i][j][0])) keysArr.push(this.keyMap[i][j][0]);
+                }
+            }
+        }
+        return keysArr;
+    }
 }
 
 var ht = new HashTable(17);
@@ -43,3 +67,4 @@ ht.set('c', 'three');
 ht.set('d', 'four');
 ht.set('e', 'five');
 ht.set('f', 'six');
+ht.set('g', 'six');
