@@ -16,10 +16,6 @@ var anagram = function (str1, str2) {
     }
 
     for(var i in fc_one) {
-        if(!(i in fc_two)) {
-            return false;
-        }
-
         if(fc_one[i] !== fc_two[i]) return false;
     }
     return true;
