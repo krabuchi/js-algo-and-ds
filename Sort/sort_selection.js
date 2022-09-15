@@ -8,25 +8,25 @@
 */
 
 /* Swap function */
-const swap = (arr, i, j) => {
-    console.log(i + "," + j);
-    var temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
-}
 
-const selection_sort = (arr) => {
+const selectionSort = (arr) => {
+    const swap = (arr, i, j) => {
+        var temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
     for (var i = 0; i < arr.length; i++) {
         var minValue = i;
         for (var j = i + 1; j < arr.length; j++) {
             if (arr[minValue] > arr[j]) {
-                minValue = arr[j];
+                minValue = j;
             }
         }
         if (i !== minValue) {
             swap(arr, minValue, i);
         }
     }
-    console.log(arr);
     return arr;
-}
+};
+
+selectionSort([0, 2, 34, 22, 10, 19, 17]);
