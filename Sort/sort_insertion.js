@@ -5,13 +5,15 @@
 4. Repeat until the array is sorted
 */
 
-const insertion_sort = function (arr) {
+const insertionSort = function (arr) {
     for(var i = 1; i < arr.length; i++) {
-        var currentVal = arr[i];
-        for(var j = i - 1; j >= 0 && arr[j] > currentVal; j--) {
+        var currentValue = arr[i];
+        for(var j = i - 1; j >= 0 && arr[j] > currentValue; j--) {
             arr[j + 1] = arr[j];
         }
-        arr[j + 1] = currentVal;
+        arr[j + 1] = currentValue;
     }
     return arr;
 }
+
+insertionSort([37, 12, 89, 23, 9]);
